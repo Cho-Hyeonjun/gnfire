@@ -1,0 +1,1100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="content-Script-Type" content="text/javascript">
+    <meta http-equiv="content-Style-Type" content="text/css">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="title" content="경남소방본부">
+    <meta name="keywords" content="경남소방본부">
+    <meta name="description" content="경남소방본부">
+    <title>경남소방본부</title>
+    <!--<link rel="Shortcut Icon" href="/gn119/images/favicon.ico">-->
+    <!-- // favicon -->
+	  <link rel="stylesheet" href="../css/swiper-bundle.min.css"/>
+    <link rel="stylesheet" type="text/css" href="../css/defalt.css" media="all">
+    <link rel="stylesheet" type="text/css" href="../css/layout.css" media="all">
+    <link rel="stylesheet" type="text/css" href="../css/common.css" media="all">
+    <link rel="stylesheet" type="text/css" href="../css/contents.css" media="all">
+    <link rel="stylesheet" type="text/css" href="../css/main.css" media="all">
+    <link rel="stylesheet" type="text/css" href="../css/jquery-ui.css" media="all">
+    <link rel="stylesheet" type="text/css" href="../css/slick.css" media="all">
+
+	<link rel="stylesheet" href="../css/jquery.mCustomScrollbar.css"/>
+	<link rel="stylesheet" href="../css/jquery.mCustomScrollbar.min.css"/>
+
+
+    <script type="text/javascript" src="../js/jquery-1.11.3.min.js"></script>
+    <script type="text/javascript" src="../js/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="../js/lnb.js"></script>
+	  <script type="text/javascript" src="../js/jquery.mCustomScrollbar.concat.min.js"></script>
+	  <script type="text/javascript" src="../js/swiper-bundle.min.js"></script>
+		<script type="text/javascript" src="../js/jquery.min.js"></script>
+    <script type="text/javascript" src="../js/jquery.form.min.js"></script>
+		<script type="text/javascript" src="../js/jquery.easing.1.3.js"></script>
+		<script type="text/javascript" src="../js/jquery.bpopup.min.js"></script>
+    <script type="text/javascript" src="../js/common.js"></script>
+		<script type="text/javascript" src="../js/common-scroll.js"></script>
+    <script type="text/javascript" src="../js/modernizr-2.6.2.min.js"></script> 
+		<script type="text/javascript" src="../js/plugins.js"></script> 
+		<script type="text/javascript" src="../js/jquery.bxslider.js"></script> <!-- 220207 슬라이드 추가 -->
+		<script type="text/javascript" src="../js/main.js"></script>
+		<script type="text/javascript" src="../js/slick.min.js"></script><!-- 220307 -->
+</head>
+<body>
+    	<!-- 바로가기 -->
+        <div id="skipArea">
+            <a href="#container">본문으로 바로가기</a>
+            <a href="#gnb">메인메뉴 바로가기</a> 
+
+        </div>
+        <!-- //바로가기 -->
+        <div id="wrap"> 
+            <!-- header  -->
+ 			<c:import url="header.jsp" />              
+            <!-- //header  --> 
+
+            <!-- container -->
+            <a href="#" name="container" title="메인콘텐츠 바로가기" class="hid"></a>
+			<div id="container">
+				<c:import url="main.jsp" /> 
+			</div>
+            <!-- //container -->
+            
+            <!-- footer -->
+            <c:import url="footer.jsp" /> 
+            <!-- // footer -->
+        </div>
+    	<header id="header">
+                <div class="temp">
+                    <div class="headerWrap clearfix">
+                        <h1 class="logo"><a href=""><img src="../images/main/logo.png" alt=""></a></h1>
+                        <div class="gnb_wrap">
+                            <div class="gnbIn">
+                            	<a href="#" id="mGnb" class="allmenu"><span>주메뉴보기</span></a>
+                              <a href="#" name="gnb" class="hid" title="메인메뉴바로가기 스킵메뉴"></a>
+                              <nav>
+																<div class="bg_wrap">
+																	<div class="lnb_bg" style="display:none;">
+																		<div class="lnb_img">
+																			<div class="txt">
+																				<strong>경상남도 소방본부</strong>
+																				<p>여러분 곁에 경남소방이 늘 함께 합니다.</p>
+																			</div>
+																		</div>
+																	</div>
+																</div>
+                                <ul id="gnb" class="pcGnb gnb">
+                                  <li class="others"><a href="#"><span>탑메뉴</span></a>
+                                    <ul class="m_util clearfix">
+																			<!-- <li><a href="/${ctx }/main.do" title="HOME">HOME</a></li> -->
+																			<li><a href="/${ctx}/lo/login/loginPage.do" title="Login">로그인</a></li>
+																			<li><a href="/${ctx }/sb/sbscrb/insertSbscrbInfo01.do" title="Join">회원가입</a></li>  
+																			<!-- <li><a href="/apple/main.do" target="_blank" title="admin">관리자</a></li> -->
+																			<li><a href="/${ctx}/sitemap.do" title="Site map">사이트맵</a></li>
+																			<li class="langTM">
+																				<button type="button">Languages</button>
+																				<ul>
+																											<li><a href="/en/main.do" title="English" target="_blank">English</a></li>
+																											<li><a href="/jap/main.do" title="Japanese" target="_blank">Japanese</a></li>
+																											<li><a href="/cha/main.do" title="Chinese" target="_blank">Chinese</a></li>
+																				</ul>
+																			</li>
+                                    </ul>
+											<!-- 검색 -->
+											<div class="search_box">
+												<div class="box_search_0">
+													<label for="topSearch_1" class="hidden">검색</label>
+													<input type="text" id="topSearch_1" name="keyword" title="검색" onkeydown="if(event.keyCode==13){goDiquestSearch('01');event.returnValue=false;}" placeholder="검색어를 입력하세요.">
+													<button type="button" onclick="goDiquestSearch('01');"><span>검색</span></button>
+												</div>
+											</div>
+											<!-- // 검색 -->
+											<!-- 언어 -->
+											<div class="lang2">
+												<button type="button">Languages</button>
+												<ul>
+							                        <li><a href="/en/main.do" title="English" target="_blank">English</a></li>
+							                        <li><a href="/jap/main.do" title="Japanese" target="_blank">Japanese</a></li>
+							                        <li><a href="/cha/main.do" title="Chinese" target="_blank">Chinese</a></li>
+												</ul>
+											</div> 
+											<!-- //언어 -->    
+                                        </li>
+                                        <!--START-->
+							<li class="gnb_first">
+								<a href="#?mi=264" >민원안내</a>
+								<div class="ulWrap" style="display: none;">
+									<ul>
+										<li><a href="/gnfire/na/ntt/selectNttList.do?mi=1649&bbsId=291" >민원상담</a>
+										<li><a href="/gnfire/na/ntt/selectNttList.do?mi=266&bbsId=292" >민원신고센터</a>
+										<li><a href="/gnfire/cm/cntnts/cntntsView.do?mi=267&cntntsId=802" >Needs Zone 공익신고센터</a>
+										<li><a href="/gnfire/cm/cntnts/cntntsView.do?mi=271&cntntsId=630" >민원사무안내</a>
+										<li><a href="/gnfire/cm/cntnts/cntntsView.do?mi=276&cntntsId=5" >행정정보공개창구</a>
+										<li><a href="/gnfire/na/ntt/selectNttList.do?mi=284&bbsId=11" >소방관련 업체정보</a>
+										<li><a href="/gnfire/cm/cntnts/cntntsView.do?mi=289&cntntsId=12" >불법행위 신고센터</a>
+										<li><a href="/gnfire/cm/cntnts/cntntsView.do?mi=290&cntntsId=13" >신축건축물 소방안전관리</a>
+										<li><a href="/gnfire/cm/cntnts/cntntsView.do?mi=1669&cntntsId=695" >소방시설 품질자문</a>
+										<li><a href="/gnfire/cm/cntnts/cntntsView.do?mi=1684&cntntsId=771" >소방시설 품질시공 위반 신고센터</a>
+										<li><a href="http://localhost:18080/minwon/mw/minwon/minwonMain.do"  target="_blank" >소방민원119</a>
+								</ul>
+								</div>
+							</li>
+							<li>
+								<a href="/gnfire/na/ntt/selectNttList.do?mi=293&bbsId=1" >소방활동</a>
+								<div class="ulWrap" style="display: none;">
+									<ul>
+										<li><a href="/gnfire/na/ntt/selectNttList.do?mi=292&bbsId=1" >119종합상황실</a>
+										<li><a href="/gnfire/cm/cntnts/cntntsView.do?mi=294&cntntsId=14" >구조구급대</a>
+										<li><a href="/gnfire/cm/cntnts/cntntsView.do?mi=295&cntntsId=15" >소방활동안내</a>
+										<li><a href="/gnfire/cm/cntnts/cntntsView.do?mi=297&cntntsId=16" >의용소방대</a>
+										<li><a href="/gnfire/cm/cntnts/cntntsView.do?mi=306&cntntsId=22" >의무소방대</a>
+										<li><a href="/ar/main.do?mi=308"  target="_blank" >119특수구조단</a>
+										<li><a href="/training/main.do?mi=309" >소방교육훈련장</a>
+										<li><a href="https://www.gnfire.go.kr/firesafe/main.do" >안전체험관</a>
+								</ul>
+								</div>
+							</li>
+							<li>
+								<a href="/gnfire/cm/cntnts/cntntsView.do?mi=312&cntntsId=24" >소방상식</a>
+								<div class="ulWrap" style="display: none;">
+									<ul>
+										<li><a href="/gnfire/cm/cntnts/cntntsView.do?mi=312&cntntsId=24" >화재예방요령</a>
+										<li><a href="/gnfire/cm/cntnts/cntntsView.do?mi=318&cntntsId=29" >안전교육</a>
+										<li><a href="/gnfire/cm/cntnts/cntntsView.do?mi=322&cntntsId=531" >화재예방지수측정</a>
+										<li><a href="/inves/main.do?mi=324" >화재조사</a>
+										<li><a href="/gnfire/na/ntt/selectNttList.do?mi=326&bbsId=3" >소방안전자료</a>
+										<li><a href="/gnfire/cm/cntnts/cntntsView.do?mi=1486&cntntsId=661" >온라인 소방안전교육</a>
+										<li><a href="/gnfire/na/ntt/selectNttList.do?mi=1501&bbsId=351" >생활안전 경연게임</a>
+								</ul>
+								</div>
+							</li>
+							<li>
+								<a href="/gnfire/na/ntt/selectNttList.do?mi=328&bbsId=4" >참여마당</a>
+								<div class="ulWrap" style="display: none;">
+									<ul>
+										<li><a href="https://www.gnfire.go.kr/wooriapt/main.do"  target="_blank" >소방민원119</a>
+										<li><a href="/gnfire/na/ntt/selectNttList.do?mi=328&bbsId=4" >자유게시판</a>
+										<li><a href="/gnfire/na/ntt/selectNttList.do?mi=329&bbsId=5" >질의응답</a>
+										<li><a href="/gnfire/na/ntt/selectNttList.do?mi=330&bbsId=6" >칭찬합니다</a>
+										<li><a href="/gnfire/qr/qrspns/selectQrspnsList.do?mi=331" >설문조사</a>
+										<li><a href="/gnfire/cm/cntnts/cntntsView.do?mi=332&cntntsId=33" >청탁금지법 상담 및 위반신고</a>
+										<li><a href="https://www.gnfire.go.kr/wooriapt/main.do" >우리아파트 화재안전체험</a>
+								</ul>
+								</div>
+							</li>
+							<li>
+								<a href="/gnfire/na/ntt/selectNttList.do?mi=334&bbsId=7" >알림마당</a>
+								<div class="ulWrap" style="display: none;">
+									<ul>
+										<li><a href="/gnfire/na/ntt/selectNttList.do?mi=334&bbsId=7" >공지사항</a>
+										<li><a href="http://www.safekorea.go.kr/idsiSFK/619/menuMap.do?w2xPath=/idsiSFK/wq/sfk/cs/csc/bbs_conf.xml&amp;bbs_no=47"  target="_blank" >소방뉴스</a>
+										<li><a href="/gnfire/na/ntt/selectNttList.do?mi=336&bbsId=8" >모집정보</a>
+										<li><a href="http://www.safekorea.go.kr/idsiSFK/neo/sfk/cs/csc/bbs_conf.jsp?bbs_no=74&amp;emgPage=Y&amp;menuSeq=101"  target="_blank" >주간안전예보</a>
+										<li><a href="/gnfire/na/ntt/selectNttList.do?mi=1540&bbsId=372" >연간감사계획</a>
+										<li><a href="/gnfire/na/ntt/selectNttList.do?mi=1541&bbsId=373" >감사결과공개</a>
+								</ul>
+								</div>
+							</li>
+							<li>
+								<a href="http://www.gyeongnam.go.kr/index.gyeong?menuCd=DOM_000000116002001000"  target="_blank" >소방자료</a>
+								<div class="ulWrap" style="display: none;">
+									<ul>
+										<li><a href="http://www.gyeongnam.go.kr/index.gyeong?menuCd=DOM_000000116002001000"  target="_blank" >자치법규</a>
+										<li><a href="http://www.nfa.go.kr/nfa/publicrelations/legalinformation/jurisdiction"  target="_blank" >소방법령</a>
+										<li><a href="http://www.gyeongnam.go.kr/board/list.gyeong?boardId=BBS_0000231&amp;menuCd=DOM_000000103001005002&amp;contentsSid=907&amp;cpath="  target="_blank" >업무추진비공개</a>
+										<li><a href="/gnfire/na/ntt/selectNttList.do?mi=1275&bbsId=301" >소방관련자료</a>
+										<li><a href="/gnfire/na/ntt/selectNttList.do?mi=1744&bbsId=462" >소방공무원 복무규범</a>
+								</ul>
+								</div>
+							</li>
+							<li>
+								<a href="/gnfire/cm/cntnts/cntntsView.do?mi=356&cntntsId=34" >본부소개</a>
+								<div class="ulWrap" style="display: none;">
+									<ul>
+										<li><a href="/gnfire/cm/cntnts/cntntsView.do?mi=356&cntntsId=34" >본부장소개</a>
+										<li><a href="/gnfire/cm/cntnts/cntntsView.do?mi=359&cntntsId=36" >개요 및 연혁</a>
+										<li><a href="/gnfire/cm/cntnts/cntntsView.do?mi=360&cntntsId=627" >조직도</a>
+										<li><a href="/gnfire/jo/jobshare/selectJobShareMenu.do?mi=362" >업무직원안내</a>
+										<li><a href="/gnfire/na/ntt/selectNttList.do?mi=1630&bbsId=409" >주요업무계획</a>
+										<li><a href="/gnfire/cm/cntnts/cntntsView.do?mi=1748&cntntsId=812" >소방 공무원 현황</a>
+										<li><a href="/gnfire/cm/cntnts/cntntsView.do?mi=366&cntntsId=628" >일반현황</a>
+										<li><a href="https://www.gnfire.go.kr/wooriapt/main.do"  target="_blank" >소방장비</a>
+										<li><a href="/gnfire/cm/cntnts/cntntsView.do?mi=370&cntntsId=44" >소방상징</a>
+										<li><a href="/gnfire/cm/cntnts/cntntsView.do?mi=379&cntntsId=48" >찾아오시는 길</a>
+								</ul>
+								</div>
+							</li>
+ 
+							<li>
+								<a href="/gnfire/na/ntt/selectNttList.do?mi=380&bbsId=450" >이용안내</a>
+								<div class="ulWrap" style="display: none;">
+									<ul>
+										<li><a href="/gnfire/sitemap.do?mi=381" >사이트맵</a>
+										<li><a href="/gnfire/cm/cntnts/cntntsView.do?mi=382&cntntsId=49" >개인정보처리방침</a>
+										<li><a href="/gnfire/cm/cntnts/cntntsView.do?mi=383&cntntsId=50" >소방서비스 헌장</a>
+										<li><a href="/gnfire/na/ntt/selectNttList.do?mi=1722&bbsId=462" >경상남도 소방공무원 복무규범 등</a>
+										<li><a href="/gnfire/na/ntt/selectNttList.do?mi=389&bbsId=10" >홈페이지의견&amp;오류신고</a>
+										<li><a href="/gnfire/cm/cntnts/cntntsView.do?mi=390&cntntsId=51" >뷰어 프로그램</a>
+										<li><a href="/gnfire/na/ntt/selectNttList.do?mi=1348&bbsId=315" >소방직원방</a>
+										<li><a href="/gnfire/ml/selectMyList.do?mi=1471" >내가쓴글보기</a>
+									</ul>
+							</div>
+							</li>
+ 
+							<!--END-->
+                                    </ul>
+                                </nav>
+                            </div>
+							<!-- 유틸메뉴 -->
+							<div class="util">       
+								<ul>
+									<li class="login"><a href="/${ctx}/lo/login/loginPage.do" title="Login">Login</a></li>
+									<li class="lang">
+										<button type="button">Languages</button>
+										<ul style="display:none;">
+											<li><a href="/en/main.do" title="English" target="_blank">English</a></li>
+											<li><a href="/jap/main.do" title="Japanese" target="_blank">Japanese</a></li>
+											<li><a href="/cha/main.do" title="Chinese" target="_blank">Chinese</a></li>
+										</ul>
+									</li>
+									<li class="sitemap"><a href="" title="sitemap">sitemap</a></li>
+								</ul>
+							</div>
+							<!-- //유틸메뉴 -->
+							<!-- 검색 -->
+							<div class="search_box">
+								<button class="btn_open">search</button>
+								<div class="box_search_0">
+									<button class="btn_close">close</button>
+									<label for="topSearch_1" class="hidden">검색</label>
+									<input type="text" id="topSearch_1" name="keyword" title="검색" onkeydown="if(event.keyCode==13){goDiquestSearch('01');event.returnValue=false;}" placeholder="검색어를 입력하세요.">
+									<button type="button" onclick="goDiquestSearch('01');"><span>검색</span></button>
+								</div>
+							</div>
+							<!-- // 검색 -->
+                        </div>
+                    </div>
+                </div>
+            </header>
+<div class="contents">
+	<section class="section01">
+		<div class="dv_wrap">
+			<div class="sec1_1">
+				<div class="cardNews">
+					<div class="slide">
+						<div class="slide01_tit">
+							<h2 class="tit">카드뉴스 <span class="small">소방본부의 주요 소식을 확인하세요.</span></h2>
+							<div class="slide01_ctrl">
+								<p class="total">
+									<span class="card_paging current">1</span> / <span>4</span>
+								</p>
+								<button type="button" class="card_ctrl_prev slick-arrow" style=""><span class="blind">이전</span></button>
+								<button type="button" class="card_ctrl_stop csps"><span class="blind">일시정지</span></button>
+								<button type="button" class="card_ctrl_play cspl" style="display:none;"><span class="blind">재생</span></button>
+								<button type="button" class="card_ctrl_next slick-arrow" style=""><span class="blind">다음</span></button>
+							</div>
+						</div>
+						<ul class="slide01">
+							<li>
+								<a href="">
+									<img src="../images/main/cardNews01.jpg" alt="">
+								</a>
+							</li>
+							<li>
+								<a href="">
+									<img src="../images/main/cardNews02.jpg" alt="">
+								</a>
+							</li>
+							<li>
+								<a href="">
+									<img src="../images/main/cardNews01.jpg" alt="">
+								</a>
+							</li>
+							<li>
+								<a href="">
+									<img src="../images/main/cardNews02.jpg" alt="">
+								</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="sec1_2">
+				<div class="board">
+					<div class="tabs01">
+						<button class="active"><span><a href="" class="more">+</a>공지사항</span></button>
+						<button><span><a href="" class="more">+</a>보도자료</span></button>
+						<button><span><a href="" class="more">+</a>채용공고</span></button>
+					</div>
+					<div class="tabs01_conts">
+						<div class="tabs01_cont cont1 active">
+							<ul>
+								<li>
+									<a href="">
+										<span class="tit">2023년 소방공무원 채용시험 시행계획 공고</span>
+										<!-- <p>소방청 공고 제2023-12호 2023년 전국 소방공무원 신규채용시험 시행계획을 아래와 같이 공고합니다.</p> -->
+										<span class="date">23.10.04</span>
+									</a>
+								</li>
+								<li>
+									<a href="">
+										<span class="tit">2023년 소방공무원 채용 필기시험 장소 공고(경남(창원포함))</span>
+										<!-- <p>경상남도 공고 제2023-569호 2023년 3월 18일 경상남도지사</p> -->
+										<span class="date">23.10.04</span>
+									</a>
+								</li>
+								<li>
+									<a href="">
+										<span class="tit">2023년 소방공무원 채용시험 시행계획 공고</span>
+										<!-- <p>소방청 공고 제2023-12호 2023년 전국 소방공무원 신규채용시험 시행계획을 아래와 같이 공고합니다.</p> -->
+										<span class="date">23.10.04</span>
+									</a>
+								</li>
+								<li>
+									<a href="">
+										<span class="tit">2023년 소방공무원 채용 필기시험 장소 공고(경남(창원포함))</span>
+										<!-- <p>경상남도 공고 제2023-569호 2023년 3월 18일 경상남도지사</p> -->
+										<span class="date">23.10.04</span>
+									</a>
+								</li>
+							</ul>
+						</div>
+						<div class="tabs01_cont cont2">
+							<ul>
+								<li>
+									<a href="">
+										<span class="tit">2023년 소방공무원 채용 필기시험 장소 공고(경남(창원포함))</span>
+										<!-- <p>경상남도 공고 제2023-569호 2023년 3월 18일 경상남도지사</p> -->
+										<span class="date">23.10.04</span>
+									</a>
+								</li>
+								<li>
+									<a href="">
+										<span class="tit">2023년 소방공무원 채용시험 시행계획 공고</span>
+										<!-- <p>소방청 공고 제2023-12호 2023년 전국 소방공무원 신규채용시험 시행계획을 아래와 같이 공고합니다.</p> -->
+										<span class="date">23.10.04</span>
+									</a>
+								</li>
+								<li>
+									<a href="">
+										<span class="tit">2023년 소방공무원 채용 필기시험 장소 공고(경남(창원포함))</span>
+										<!-- <p>경상남도 공고 제2023-569호 2023년 3월 18일 경상남도지사</p> -->
+										<span class="date">23.10.04</span>
+									</a>
+								</li>
+								<li>
+									<a href="">
+										<span class="tit">2023년 소방공무원 채용시험 시행계획 공고</span>
+										<!-- <p>소방청 공고 제2023-12호 2023년 전국 소방공무원 신규채용시험 시행계획을 아래와 같이 공고합니다.</p> -->
+										<span class="date">23.10.04</span>
+									</a>
+								</li>
+							</ul>
+						</div>
+						<div class="tabs01_cont cont3">
+							<ul>
+								<li>
+									<a href="">
+										<span class="tit">2023년 소방공무원 채용시험 시행계획 공고</span>
+										<!-- <p>소방청 공고 제2023-12호 2023년 전국 소방공무원 신규채용시험 시행계획을 아래와 같이 공고합니다.</p> -->
+										<span class="date">23.10.04</span>
+									</a>
+								</li>
+								<li>
+									<a href="">
+										<span class="tit">2023년 소방공무원 채용 필기시험 장소 공고(경남(창원포함))</span>
+										<!-- <p>경상남도 공고 제2023-569호 2023년 3월 18일 경상남도지사</p> -->
+										<span class="date">23.10.04</span>
+									</a>
+								</li>
+								<li>
+									<a href="">
+										<span class="tit">2023년 소방공무원 채용시험 시행계획 공고</span>
+										<!-- <p>소방청 공고 제2023-12호 2023년 전국 소방공무원 신규채용시험 시행계획을 아래와 같이 공고합니다.</p> -->
+										<span class="date">23.10.04</span>
+									</a>
+								</li>
+								<li>
+									<a href="">
+										<span class="tit">2023년 소방공무원 채용 필기시험 장소 공고(경남(창원포함))</span>
+										<!-- <p>경상남도 공고 제2023-569호 2023년 3월 18일 경상남도지사</p> -->
+										<span class="date">23.10.04</span>
+									</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="service">
+					<div class="slide">
+						<div class="slide02_tit">
+							<h2 class="tit"><span class="light">자주 찾는</span> 민원서비스 <span class="small">자주 이용하는 민원서비스입니다.</span></h2>
+							<div class="slide02_ctrl">
+								<!-- <p class="total">
+									<span class="service_paging current">01</span> / <span>09</span>
+								</p> -->
+								<button type="button" class="service_ctrl_prev slick-arrow" style=""><span class="blind">이전</span></button>
+								<button type="button" class="service_ctrl_stop csps"><span class="blind">일시정지</span></button>
+								<button type="button" class="service_ctrl_play cspl" style="display:none;"><span class="blind">재생</span></button>
+								<button type="button" class="service_ctrl_next slick-arrow" style=""><span class="blind">다음</span></button>
+							</div>
+						</div>
+						<ul class="slide02">
+							<li class="service01">
+								<a href="">
+									<span>불친절신고</span>
+								</a>
+							</li>
+							<li class="service02">
+								<a href="">
+									<span>신축건축물 소방안전관리</span>
+								</a>
+							</li>
+							<li class="service03">
+								<a href="">
+									<span>민원상담</span>
+								</a>
+							</li>
+							<li class="service04">
+								<a href="">
+									<span>소방시설 품질자문</span>
+								</a>
+							</li>
+							<li class="service05">
+								<a href="">
+									<span>우리아파트 화재안전체험</span>
+								</a>
+							</li>
+							<li class="service06">
+								<a href="">
+									<span>경상남도 안전체험관</span>
+								</a>
+							</li>
+							<li class="service07">
+								<a href="">
+									<span>일일종합 상황보고</span>
+								</a>
+							</li>
+							<li class="service08">
+								<a href="">
+									<span>비상구 불법사례</span>
+								</a>
+							</li>
+							<li class="service09">
+								<a href="">
+									<span>부조리신고</span>
+								</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="section02">
+		<div class="dv_wrap">
+			<div class="sec2_1">
+				<h2 class="tit"><span class="orange">도내소방서</span> 바로가기</h2>
+				<div class="gnmap">
+					
+		<svg version="1.1" id="Isolation_Mode" xmlns:x="&ns_extend;" xmlns:i="&ns_ai;" xmlns:graph="&ns_graphs;"
+		xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:a="http://ns.adobe.com/AdobeSVGViewerExtensions/3.0/"
+		x="0px" y="0px" viewBox="0 0 945.667 763.154"
+		style="enable-background:new 0 0 945.667 763.154;" xml:space="preserve">
+   
+		   <!--거창-->
+		   <g>
+			<a href="#"  class="map_box" title="거창"> 
+				<polygon class="st0" points="84.848,123.075 96.002,123.075 105.871,117.927 114.449,127.793 116.594,136.804 133.755,140.234 
+			138.044,153.105 154.347,163.831 171.508,159.97 178.801,167.692 175.798,192.574 157.78,204.157 153.061,215.312 157.78,220.46 
+			169.364,218.314 176.226,234.187 188.667,242.338 195.961,242.338 201.539,256.067 222.56,256.067 222.56,235.476 
+			236.288,227.752 236.288,212.737 246.155,207.161 246.155,200.296 233.284,198.152 235,190.429 244.009,188.712 246.155,169.836 
+			267.606,161.686 273.611,151.389 291.2,148.386 291.2,133.371 283.479,120.072 274.041,116.211 274.469,93.044 267.177,86.18 
+			270.608,77.6 283.479,74.168 298.065,62.156 304.071,51.86 287.77,41.135 259.883,46.711 212.263,36.845 209.26,22.687 
+			191.671,17.968 176.656,4.668 155.206,20.114 153.918,30.41 115.308,46.283 96.86,41.992 75.839,69.02 75.839,85.323 
+			66.401,93.044 80.558,106.343 		"/>
+			</a>
+		</g>
+
+		<!--합천-->
+		<g>
+			<a href="#"  class="map_box" title="합천"> 
+				<polygon class="st0" points="450.504,264.505 438.779,262.79 422.191,250.777 416.185,257.927 410.751,259.929 399.024,252.779 
+			392.447,264.505 372.426,269.081 357.839,279.377 359.556,291.39 352.691,306.261 355.265,316.557 350.69,327.999 
+			335.246,327.999 322.661,337.437 304.071,345.302 292.917,344.872 290.342,334.575 282.192,331.144 280.046,321.705 
+			270.179,316.557 253.877,317.845 233.713,297.682 232.856,274.943 222.56,256.067 222.56,235.476 236.288,227.752 
+			236.288,212.737 246.155,207.161 246.155,200.296 233.284,198.152 235,190.429 244.009,188.712 246.155,169.836 267.606,161.686 
+			273.611,151.389 291.2,148.386 291.2,133.371 283.479,120.072 274.041,116.211 274.469,93.044 267.177,86.18 270.608,77.6 
+			283.479,74.168 298.065,62.156 304.071,51.86 320.373,59.153 325.95,79.316 353.688,107.202 364.133,135.087 361.129,147.958 
+			338.199,158.253 344.633,165.118 359.11,167.264 375.286,177.56 385.178,165.547 402.313,166.405 412.61,158.253 443.498,162.973 
+			453.883,186.568 438.78,193.002 441.781,206.731 452.078,214.453 447.046,229.706 450.363,240.623 467.523,256.067 		"/>
+			</a>
+		</g>
+   
+		<!--창녕-->
+		<g>
+			<a href="#"  class="map_box" title="창녕"> 
+				<polygon class="st0" points="441.781,206.731 452.078,214.453 447.174,229.898 450.363,240.623 467.523,256.067 484.684,259.929 
+			488.546,273.228 474.816,284.812 457.368,287.385 457.368,298.039 463.662,309.693 480.393,309.693 494.551,324.708 
+			511.711,333.718 523.723,331.144 534.02,321.705 548.605,323.421 562.763,333.718 570.484,340.367 579.494,332.217 
+			599.692,330.929 609.739,337.15 618.962,337.15 617.247,322.135 617.247,301.113 601.802,289.53 582.497,289.53 570.484,274.943 
+			570.484,261.793 579.923,253.065 582.497,232.042 582.497,200.296 561.047,183.994 554.183,152.676 537.022,142.38 
+			527.584,150.532 530.851,158.253 524.152,168.121 498.412,167.692 475.675,184.851 453.883,186.568 438.779,193.002 		"/>
+			</a>
+		</g>
+   
+		<!--밀양-->
+		<g>
+			<a href="#"  class="map_box" title="밀양"> 
+				<polygon class="st0" points="579.923,253.065 570.484,261.793 570.484,274.943 582.497,289.53 601.802,289.53 617.247,301.113 
+			617.247,322.135 618.962,337.15 636.124,337.15 651.997,345.302 665.725,356.026 674.091,350.449 694.253,353.237 
+			702.618,348.732 698.544,340.367 702.618,333.503 714.417,334.575 725.143,327.712 747.021,323.635 754.313,313.125 
+			767.185,311.195 769.33,305.404 765.039,299.612 768.258,292.533 787.349,284.812 791.425,276.66 791.425,257.568 795.284,252.85 
+			807.297,251.133 817.593,235.044 805.581,225.179 803.007,217.028 827.89,211.451 835.183,190 824.456,178.417 795.714,179.275 
+			766.112,167.692 731.793,182.707 723.213,196.005 706.909,194.719 686.317,217.028 645.99,197.294 623.683,191.716 
+			612.099,199.439 582.497,200.296 582.497,232.042 		"/>
+			</a>
+		</g>
+   
+		<!--양산-->
+		<g>
+			<a href="#"  class="map_box" title="양산">
+				<polygon class="st0" points="923.559,282.665 913.69,290.388 900.821,289.53 881.944,271.083 877.654,255.209 858.35,244.914 
+			817.593,235.044 807.297,251.133 795.284,252.85 791.425,257.568 791.425,276.66 787.349,284.812 768.258,292.533 
+			765.039,299.612 769.33,305.404 767.185,311.195 754.313,313.125 747.021,323.635 747.021,335.434 756.674,341.869 
+			775.764,345.302 797.645,362.891 799.146,378.334 806.226,379.406 810.728,383.697 811.157,390.176 826.604,400.214 
+			840.759,398.498 859.637,387.773 880.657,376.189 891.383,362.032 889.238,348.304 893.956,341.011 908.115,343.156 
+			928.277,342.297 937.716,320.418 937.716,294.249 		"/>
+			</a>
+		</g>
+   
+		<!--함양-->
+		<g>
+			<a href="#"  class="map_box" title="함양"> 
+				<polygon class="st0" points="56.105,374.901 66.401,377.906 88.28,369.754 94.716,356.026 94.716,336.292 105.871,329.428 
+			119.598,294.249 130.322,291.247 144.48,274.515 149.199,258.212 139.761,252.635 143.622,238.906 169.364,218.314 157.78,220.46 
+			153.061,215.312 157.78,204.157 175.798,192.574 178.801,167.692 171.508,159.97 154.347,163.831 138.044,153.105 
+			133.755,140.234 116.594,136.804 114.449,127.793 105.871,117.927 96.002,123.075 84.848,123.075 80.558,106.343 66.401,93.044 
+			54.389,90.042 43.664,96.906 38.516,135.087 25.218,168.978 25.218,189.571 13.205,206.731 8.057,232.9 20.927,245.771 
+			38.944,250.49 45.38,268.508 31.652,281.807 37.659,299.826 52.673,299.826 48.382,314.841 26.075,322.135 17.495,342.297 
+			26.933,360.316 19.641,373.186 39.231,377.906 		"/>
+			</a>
+		</g>
+   
+		<!--산청-->
+		<g>
+			<a href="#"  class="map_box" title="산청"> 
+				<polygon class="st0" points="199.822,420.377 224.276,419.948 232.856,407.936 244.869,398.926 247.013,386.914 267.177,385.197 
+			274.898,377.048 278.331,369.754 304.071,365.894 306.217,357.743 304.071,345.302 292.917,344.872 290.342,334.575 
+			282.192,331.144 280.046,321.705 270.179,316.557 253.877,317.845 233.713,297.682 232.856,274.943 222.56,256.067 
+			201.539,256.067 195.961,242.338 188.667,242.338 176.226,234.187 169.364,218.314 143.622,238.906 139.761,252.635 
+			149.199,258.212 144.48,274.515 130.322,291.247 119.598,294.249 105.871,329.428 94.716,336.292 94.716,356.026 88.28,369.754 
+			66.401,377.906 66.401,399.356 88.709,422.522 102.438,420.377 109.301,428.957 112.305,436.68 147.054,443.973 161.211,435.393 
+			165.072,419.091 174.94,418.661 179.66,429.815 185.236,438.395 194.674,434.105 		"/>
+			</a>
+		</g>
+   
+		<!--의령-->
+		<g>
+			<a href="#"  class="map_box" title="의령">
+				<polygon class="st0" points="304.071,365.894 322.947,360.316 346.114,363.105 356.41,380.908 354.265,398.068 373.141,410.939 
+			402.743,410.939 407.891,406.006 416.392,404.934 419.045,394.208 413.897,386.485 420.761,375.974 426.982,373.401 
+			426.982,355.168 434.49,348.948 446.287,350.663 459.157,363.533 469.127,362.891 471.17,350.879 481.896,350.235 
+			490.475,341.439 494.551,324.708 480.393,309.693 463.662,309.693 457.368,298.039 457.368,287.385 474.816,284.812 
+			488.546,273.228 484.684,259.929 467.523,256.067 450.504,264.505 438.779,262.79 422.191,250.777 416.185,257.927 
+			410.751,259.929 399.024,252.779 392.447,264.505 372.426,269.081 357.839,279.377 359.556,291.39 352.691,306.261 
+			355.265,316.557 350.69,327.999 335.246,327.999 322.661,337.437 304.071,345.302 306.217,357.743 		"/>
+			</a>
+		</g>
+   
+		<!--함안-->
+		<g>
+			<a href="#"  class="map_box" title="함안"> 
+				<polygon class="st0" points="548.605,323.421 534.02,321.705 523.723,331.144 511.711,333.718 494.551,324.708 490.475,341.439 
+			481.896,350.235 471.17,350.879 469.127,362.891 459.157,363.533 446.287,350.663 434.49,348.948 426.982,355.168 
+			426.982,373.401 420.761,375.974 413.897,386.485 419.045,394.208 416.392,404.934 407.891,406.006 402.743,410.939 
+			419.723,420.694 420.331,432.817 431.628,436.68 437.492,445.26 455.653,446.976 457.368,468.426 465.807,464.78 469.127,450.407 
+			472.885,444.616 482.109,447.405 482.109,459.417 488.115,470.143 501.414,468.212 503.989,463.063 516,459.417 525.868,447.405 
+			522.992,437.109 519.004,432.817 521.793,403.218 528.87,399.356 543.888,399.356 548.605,406.22 561.262,406.648 570.89,400.643 
+			566.838,387.773 562.118,377.477 562.118,352.379 568.768,347.231 570.484,340.367 562.763,333.718 		"/>
+			</a>
+		</g>
+
+		   <!--김해-->
+		   <g>
+			   <a href="#"  class="map_box gh" title="김해"> 
+				   <polygon class="st0" points="810.728,383.697 806.226,379.406 799.146,378.334 797.645,362.891 775.764,345.302 756.674,341.869 
+			   747.021,335.434 747.021,323.635 725.143,327.712 714.417,334.575 702.618,333.503 698.544,340.367 702.618,348.732 
+			   694.253,353.237 674.091,350.449 665.725,356.026 671.088,375.974 667.012,379.621 652.471,374.88 647.277,381.337 
+			   653.712,390.176 661.221,396.782 662.292,424.238 681.383,434.75 686.746,443.544 684.816,453.625 676.021,460.275 
+			   675.099,465.806 694.468,467.813 710.341,473.575 723.641,471 730.934,464.993 743.804,475.29 757.658,471.054 758.819,458.988 
+			   745.949,444.401 751.955,434.964 784.988,432.817 793.139,427.24 815.02,425.954 826.604,410.939 826.604,400.214 
+			   811.157,390.176 		"/>
+			   </a>
+		   </g>
+   
+		   <!--하동-->
+		   <g>
+			   <a href="#"  class="map_box" title="하동">
+				   <polygon class="st0" points="204.541,553.943 202.826,539.07 191.099,531.347 187.955,519.049 189.097,503.034 177.371,492.167 
+			   175.368,482.727 187.955,478.15 197.391,487.303 207.115,487.303 219.128,477.293 209.689,463.563 187.955,457.272 
+			   185.236,438.395 179.66,429.815 174.94,418.661 165.072,419.091 161.211,435.393 147.054,443.973 112.305,436.68 109.301,428.957 
+			   102.438,420.377 88.709,422.522 66.401,399.356 66.401,377.906 56.105,374.901 39.231,377.906 19.641,373.186 8.057,380.051 
+			   8.057,400.214 21.355,430.245 21.785,452.982 52.244,482.583 71.55,490.305 67.688,511.328 80.987,531.49 96.86,534.494 
+			   115.308,547.792 118.311,571.817 106.727,585.117 109.301,602.276 133.326,614.289 150.058,608.282 169.792,609.57 
+			   196.819,599.274 201.109,586.403 202.114,586.226 201.681,567.099 		"/>
+			   </a>
+		   </g>
+   
+   
+   
+		   <!--진주-->
+		   <g>
+			   <a href="#"  class="map_box" title="진주"> 
+				   <polygon class="st0" points="437.492,445.26 431.628,436.68 420.331,432.817 419.723,420.694 402.743,410.939 373.141,410.939 
+			   354.265,398.068 356.41,380.908 346.114,363.105 322.947,360.316 304.071,365.894 278.331,369.754 274.898,377.048 
+			   267.177,385.197 247.013,386.914 244.869,398.926 232.856,407.936 224.276,419.948 199.822,420.377 194.674,434.105 
+			   185.236,438.395 187.955,457.272 209.689,463.563 219.128,477.293 247.442,479.581 256.309,488.161 256.309,503.034 
+			   266.104,503.034 274.614,495.025 293.204,495.598 303.643,506.465 312.366,506.465 320.66,499.03 338.393,505.321 
+			   342.397,518.764 338.107,530.203 351.262,540.499 365.276,537.353 367.85,527.629 364.133,515.617 372.998,503.892 
+			   399.31,495.598 437.635,491.879 451.364,492.45 457.368,468.426 455.653,446.976 		"/>
+			   </a>
+		   </g>
+   
+		   <!--사천-->
+		   <g>
+			   <a href="#"  class="map_box" title="사천">
+				   <polygon class="st0" points="324.092,596.843 332.959,586.227 346.4,584.83 349.261,576.25 344.685,563.381 351.262,540.499 
+			   338.107,530.203 342.397,518.764 338.393,505.321 320.66,499.03 312.366,506.465 303.643,506.465 293.204,495.598 
+			   274.614,495.025 266.104,503.034 256.309,503.034 256.309,488.161 247.442,479.581 219.128,477.293 207.115,487.303 
+			   197.391,487.303 187.955,478.15 175.368,482.727 177.371,492.167 189.097,503.034 187.955,519.049 191.099,531.347 
+			   202.826,539.07 204.541,553.943 201.681,567.099 202.114,586.226 208.403,585.117 225.133,591.122 250.875,582.113 
+			   256.88,571.817 252.59,557.66 256.88,552.083 271.038,553.371 273.182,563.666 268.034,572.675 268.893,604.85 283.05,618.579 
+			   312.221,622.011 325.808,605.995 		"/>
+			   </a>
+		   </g>
+   
+		   <!--창원-->
+		   <g>
+			<a href="#"  class="map_box cw" title="창원">
+				<path class="st0" d="M731.362,480.867l-18.876-0.429l-2.146-6.863l-15.873-5.762l-19.021-1.971c0.264-0.592,0.248-1.141-0.091-1.575
+		l0.665-3.992l8.796-6.65l1.93-10.082l-5.363-8.794l-19.091-10.512l-1.071-27.456l-7.509-6.606l-6.435-8.838l5.193-6.458
+		l14.541,4.741l4.076-3.647l-5.363-19.948l-13.728-10.724l-15.873-8.152h-17.162h-9.223l-10.047-6.221l-20.198,1.289l-9.01,8.15
+		l-1.717,6.864l-6.649,5.148v25.097l4.72,10.296l4.052,12.87l-9.628,6.005l-12.656-0.428l-4.718-6.864H528.87l-7.077,3.861
+		l-2.789,29.6l3.988,4.292l2.876,10.296L516,459.417l-12.011,3.646l-2.575,5.149l-13.299,1.931l-6.006-10.726v-12.012l-9.225-2.789
+		l-3.758,5.791l-3.32,14.373l-8.438,3.646l-6.004,24.023l9.724,14.301l15.731,2.146l13.157,8.436l3.717,12.377l21.449-8.086
+		l-0.857-10.296l15.015-5.577l9.011,4.289l13.727-3.861l20.164,11.154l3.861,15.015l21.879,0.431l10.295-10.297l-4.718-19.734
+		l-0.858-16.303l-24.882-22.308l-2.573-12.012l10.179-9.756c0.303,0.482,0.651,0.894,1.03,1.26l4.235,6.352l0.856,14.586
+		l13.154,10.785l8.296,6.805l14.587,7.723l14.158-2.145l7.293,22.736l20.162,2.574l20.593-1.716l24.883,2.573l17.588-10.296
+		l11.584-5.148v-10.724L731.362,480.867z"/>
+				</a>
+			</g>
+   
+		   <!--고성-->
+		   <g>
+			   <a href="#"  class="map_box" title="고성">
+				   <polygon class="st0" points="476.819,508.897 461.088,506.75 451.364,492.45 437.635,491.879 399.31,495.598 372.998,503.892 
+			   364.133,515.617 367.85,527.629 365.276,537.353 351.262,540.499 344.685,563.381 349.261,576.25 346.4,584.83 332.959,586.227 
+			   324.092,596.843 325.808,605.995 312.221,622.011 319.944,635.739 338.393,641.746 360.7,639.599 366.707,629.733 
+			   366.707,616.434 377.431,613.001 394.162,616.862 405.746,631.45 418.187,629.304 423.764,619.007 437.492,612.144 
+			   447.932,603.708 460.516,607.925 469.955,601.992 477.104,592.266 496.267,600.559 504.847,579.967 523.293,576.536 
+			   534.877,561.521 529.3,546.076 514.715,536.638 488.973,542.215 472.242,551.226 469.127,560.233 461.088,562.807 
+			   454.652,554.228 462.805,541.358 493.693,529.709 489.977,517.333 		"/>
+			   </a>
+		   </g>
+   
+		   <!--통영-->
+			<g>
+				<a href="#"  class="map_box" title="통영">
+					<g>
+						<polygon class="st0" points="469.955,601.992 460.516,607.925 447.932,603.708 437.492,612.144 444.355,621.153 438.35,631.019 
+							426.767,635.739 424.193,653.758 431.486,667.486 444.355,663.197 461.088,659.335 461.088,665.77 447.789,674.35 
+							438.779,677.782 440.066,688.935 454.225,693.655 471.384,710.386 483.826,727.118 498.842,727.118 504.418,717.25 
+							504.418,702.235 507.42,687.221 507.42,664.483 519.004,651.183 519.004,631.877 509.566,631.019 498.842,635.739 
+							491.547,629.733 498.412,621.153 496.267,600.559 477.104,592.266 			"/>
+					</g>
+					<g>
+						<polygon class="st0" points="532.732,692.797 521.577,684.646 512.997,698.375 517.288,721.541 512.997,733.552 502.271,743.42 
+							504.847,756.719 515.143,758.864 521.577,751.572 525.868,739.128 541.313,737.414 546.89,727.118 539.596,707.813 			"/>
+					</g>
+				</a>
+			</g>
+   
+			<!--거제-->
+			<g>
+				<a href="#"  class="map_box" title="거제">
+					<polygon class="st0" points="657.574,633.166 657.145,624.584 673.876,617.291 674.305,603.992 656.287,586.403 655.428,572.675 
+				664.438,564.524 661.434,551.226 648.994,542.643 637.41,545.218 631.832,560.233 618.532,556.802 591.936,576.536 
+				591.078,590.693 581.21,602.706 594.476,623.991 588.933,632.308 559.331,617.291 532.732,627.588 525.868,650.326 
+				531.016,670.917 541.741,684.646 559.331,682.5 576.491,668.773 588.933,675.637 586.358,686.791 563.191,698.803 564.05,714.676 
+				585.071,717.25 594.08,740.845 581.21,751.142 594.08,758.864 614.243,749.425 627.114,738.271 639.983,734.839 639.983,721.97 
+				632.69,709.1 639.983,700.089 642.987,688.077 664.867,699.662 677.737,693.655 670.016,669.63 679.882,662.337 679.882,642.173 
+				675.163,632.736 		"/>
+				</a>
+			</g>
+
+		   <!--남해-->
+		   <g>
+			   <a href="#"  class="map_box" title="남해">
+   
+				   <g>
+					   <polygon class="st0" points="273.611,677.782 239.291,677.782 220.415,682.93 209.689,685.504 196.819,669.202 194.674,650.753 
+		   212.692,638.312 222.988,624.156 208.831,610.427 187.81,612.573 174.94,615.577 162.498,627.588 148.342,630.162 141.048,646.035 
+		   130.322,664.483 135.9,676.066 147.054,686.362 159.066,713.819 153.491,724.973 171.508,746.853 192.1,749.855 203.254,741.705 
+		   198.106,730.121 198.534,718.966 211.405,714.248 218.699,727.118 221.273,747.709 238.862,763.154 256.023,750.284 
+		   274.469,748.139 286.481,736.554 286.481,723.255 278.331,711.245 286.481,702.235 295.062,700.089 292.488,687.863 	"/>
+	   <polygon class="st0" points="267.606,669.202 291.2,679.927 303.643,676.066 291.2,658.476 290.772,642.173 274.041,635.739 
+		   266.104,646.035 258.597,642.603 263.315,631.019 262.029,620.724 238.862,620.724 228.566,643.462 233.713,664.913 	"/>
+				   </g>
+   
+			   </a>
+		   </g>
+   
+		   </svg>
+					<div class="map_name_group">
+						<div class="map_name gc">
+							<a href="">거창</a>
+						</div>
+						<div class="map_name hc">
+							<a href="">합천</a>
+						</div>
+						<div class="map_name cn">
+							<a href="">창녕</a>
+						</div>
+						<div class="map_name my">
+							<a href="">밀양</a>
+						</div>
+						<div class="map_name ys">
+							<a href="">양산</a>
+						</div>
+						<div class="map_name hy">
+							<a href="">함양</a>
+						</div>
+						<div class="map_name snc">
+							<a href="">산청</a>
+						</div>
+						<div class="map_name er">
+							<a href="">의령</a>
+						</div>
+						<div class="map_name ha">
+							<a href="">함안</a>
+						</div>
+						<div class="map_name ghe">
+							<a href="">김해동부</a>
+						</div>
+						<div class="map_name hd">
+							<a href="">하동</a>
+						</div>
+						<div class="map_name jj">
+							<a href="">진주</a>
+						</div>
+						<div class="map_name sc">
+							<a href="">사천</a>
+						</div>
+						<div class="map_name ghw">
+							<a href="">김해서부</a>
+						</div>
+						<div class="map_name gs">
+							<a href="">고성</a>
+						</div>
+						<div class="map_name ty">
+							<a href="">통영</a>
+						</div>
+						<div class="map_name gj">
+							<a href="">거제</a>
+						</div>
+						<div class="map_name nh">
+							<a href="">남해</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="sec2_2">
+				<h2 class="tit">미디어 홍보관</h2>
+				<div class="photoboard">
+					<div class="tabs02">
+						<button class="active">사진자료</button>
+						<button>동영상자료</button>
+					</div>
+					<div class="tabs02_conts">
+						<div class="tabs02_cont cont1 active">
+							<ul>
+								<li>
+									<a href="">
+										<img src="../images/main/media_img_27.jpg" alt="">
+										<div>
+											<h4>경상남도 안전체험관</h4>
+											<span class="date"></span>
+										</div>
+									</a>
+								</li>
+								<li>
+									<a href="">
+										<img src="../images/main/media_img_29.jpg" alt="">
+										<div>
+											<h4>사천 항농누리어린이집</h4>
+											<span class="date"></span>
+										</div>
+									</a>
+								</li>
+							</ul>
+							<a href="" class="more">더보기 +</a>
+						</div>
+						<div class="tabs02_cont cont2">
+							<ul>
+								<li>
+									<a href="">
+										<img src="../images/main/media_img_27.jpg" alt="">
+										<div>
+											<h4>경상남도 안전체험관</h4>
+											<span class="date"></span>
+										</div>
+									</a>
+								</li>
+								<li>
+									<a href="">
+										<img src="../images/main/media_img_29.jpg" alt="">
+										<div>
+											<h4>사천 항농누리어린이집</h4>
+											<span class="date"></span>
+										</div>
+									</a>
+								</li>
+							</ul>
+							<a href="" class="more">더보기 +</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="sec2_3">
+				<div class="popup">
+					<div class="popup_tit">
+						<h2 class="tit">팝업존</h2>
+						<a href="" class="more">
+							<span></span>
+						</a>
+						<div class="slide03_ctrl">
+							<p class="total">
+								<span class="pop_paging current">1</span> / <span>2</span>
+							</p>
+							<button type="button" class="pop_ctrl_prev slick-arrow" style=""><span class="blind">이전</span></button>
+							<button type="button" class="pop_ctrl_stop csps"><span class="blind">일시정지</span></button>
+							<button type="button" class="pop_ctrl_play cspl" style="display:none;"><span class="blind">재생</span></button>
+							<button type="button" class="pop_ctrl_next slick-arrow" style=""><span class="blind">다음</span></button>
+						</div>
+					</div>
+					<div class="slide">
+						<ul class="slide03">
+							<li>
+								<a href="">
+									<img src="../images/main/popup_img01_27.jpg" alt="">
+								</a>
+							</li>
+							<li>
+								<a href="">
+									<img src="../images/main/popup_img01_27.jpg" alt="">
+								</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+</div>
+<div id="bnr">
+    <div class="dv_wrap">
+        <div class="bnrCtrl" id="bnrCtrl11">
+            <span class="tit">배너모음</span>
+            <ul>
+                <li><a href="#prev" class="prev" title="이전 배너모음">이전</a></li>
+                <li id="bnrCtrlStop"><a href="#bnrCtrlStop" class="stop on" title="배너정지">정지</a></li>
+                <li id="bnrCtrlPlay"><a href="#bnrCtrlPlay" class="play" title="배너재생">재생</a></li>
+                <li><a href="#next" class="next" title="다음 배너모음">다음</a></li>
+                <!-- <li><a href="/index.gyeong?menuCd=DOM_000000104001002002" class="all" title="전체 배너모음">전체</a></li> -->
+            </ul>
+        </div>
+        <ul class="bnrList">
+            <li>
+                <a href="">
+                    <img src="../images/main/img_banner1.gif" alt="">
+                </a>
+            </li>
+            <li>
+                <a href="">
+                    <img src="../images/main/img_banner2.gif" alt="">
+                </a>
+            </li>
+            <li>
+                <a href="">
+                    <img src="../images/main/img_banner3.gif" alt="">
+                </a>
+            </li>
+            <li>
+                <a href="">
+                    <img src="../images/main/img_banner4.gif" alt="">
+                </a>
+            </li>
+            <li>
+                <a href="">
+                    <img src="../images/main/img_banner5.gif" alt="">
+                </a>
+            </li>
+            <li>
+                <a href="">
+                    <img src="../images/main/img_banner1.gif" alt="">
+                </a>
+            </li>
+            <li>
+                <a href="">
+                    <img src="../images/main/img_banner2.gif" alt="">
+                </a>
+            </li>
+            <li>
+                <a href="">
+                    <img src="../images/main/img_banner3.gif" alt="">
+                </a>
+            </li>
+            <li>
+                <a href="">
+                    <img src="../images/main/img_banner4.gif" alt="">
+                </a>
+            </li>
+            <li>
+                <a href="">
+                    <img src="../images/main/img_banner5.gif" alt="">
+                </a>
+            </li>
+        </ul>
+    </div>
+</div> 
+ <footer>
+                <div class="area_footer">
+					
+						<!-- 사이트링크 -->
+						<div class="siteLink">
+							<div class="dv_wrap">
+								<div class="site_list">
+									<h2 class="tit">소방관련기관</h2>
+									<ul>
+										<li><a target="_blank" title="새창" href="http://www.nfa.go.kr">소방청</a></li>
+										<li><a target="_blank" title="새창" href="http://www.mois.go.kr">행정안전부</a></li>
+										<li><a target="_blank" title="새창" href="http://www.gyeongnam.go.kr">경상남도청</a></li>
+										<li><a target="_blank" title="새창" href="http://www.119.go.kr/">119안전신고센터</a></li>
+										<li><a target="_blank" title="새창" href="http://www.rescue.go.kr/">중앙119구조본부</a></li>
+										<li><a target="_blank" title="새창" href="http://fire.seoul.go.kr">서울소방재난본부</a></li>
+										<li><a target="_blank" title="새창" href="http://new119.incheon.go.kr">인천소방본부</a></li>
+										<li><a target="_blank" title="새창" href="https://www.gwangju.go.kr/fire">광주소방본부</a></li>
+										<li><a target="_blank" title="새창" href="http://www.daejeon.go.kr/dj119/index.do">대전소방본부</a></li>
+										<li><a target="_blank" title="새창" href="http://fire.ulsan.go.kr/">울산소방본부</a></li>
+										<li><a target="_blank" title="새창" href="http://www.daegu.go.kr/119/index.do">대구소방본부</a></li>
+										<li><a target="_blank" title="새창" href="https://119.gg.go.kr/">경기도재난안전본부</a></li>
+										<li><a target="_blank" title="새창" href="https://119.gg.go.kr/north/">경기도북부소방재난본부</a></li>
+										<li><a target="_blank" title="새창" href="http://www.sejong.go.kr/fire.do">세종시 소방본부</a></li>
+										<li><a target="_blank" title="새창" href="https://fire.gwd.go.kr/fire">강원소방본부</a></li>
+										<li><a target="_blank" title="새창" href="http://cb119.chungbuk.go.kr/index.do">충북소방본부</a></li>
+										<li><a target="_blank" title="새창" href="http://www.cn119.go.kr/">충청남도소방본부</a></li>
+										<li><a target="_blank" title="새창" href="http://www.sobang.kr">전북소방본부</a></li>
+										<li><a target="_blank" title="새창" href="http://www.jnsobang.go.kr/">전남소방본부</a></li>
+										<li><a target="_blank" title="새창" href="http://www.gb119.go.kr/">경북소방본부</a></li>
+										<li><a target="_blank" title="새창" href="http://www.jeju119.go.kr/">제주소방본부</a></li>
+										<li><a target="_blank" title="새창" href="http://kn119.kgeu.org/">경상남도 소방공무원노동조합</a></li>
+									</ul>
+								</div>
+								<div class="site_list">
+									<h2 class="tit">재난관련정보기관</h2>
+									<ul>
+										<li><a target="_blank" title="새창" href="http://www.safekorea.go.kr">국민재난안전포털</a></li>
+										<li><a target="_blank" title="새창" href="http://www.kma.go.kr/">기상특보(기상청)</a></li>
+										<li><a target="_blank" title="새창" href="http://www.wamis.go.kr/">국가수자원종합관리시스템</a></li>
+										<li><a target="_blank" title="새창" href="http://www.roadplus.co.kr">교통상황정보(스마트교통센터)</a></li>
+										<li><a target="_blank" title="새창" href="http://hazmat.mpss.kfi.or.kr/index.do">국가위험물정보시스템</a></li>
+									</ul>
+								</div>
+								<div class="site_list">
+									<h2 class="tit">도내소방서안내</h2>
+									<ul>
+										<li><a target="_blank" title="새창" href="/geoje/main.do">거제소방서</a></li>
+										<li><a target="_blank" title="새창" href="/geochang/main.do">거창소방서</a></li>
+										<li><a target="_blank" title="새창" href="/goseong/main.do">고성소방서</a></li>
+										<li><a target="_blank" title="새창" href="/gimhaeeast/main.do">김해동부소방서</a></li>
+										<li><a target="_blank" title="새창" href="/gimhaewest/main.do">김해서부소방서</a></li>
+										<li><a target="_blank" title="새창" href="/namhae/main.do">남해소방서</a></li>
+										<li><a target="_blank" title="새창" href="/miryang/main.do">밀양소방서</a></li>
+										<li><a target="_blank" title="새창" href="/sacheon/main.do">사천소방서</a></li>
+										<li><a target="_blank" title="새창" href="/sancheong/main.do">산청소방서</a></li>
+										<li><a target="_blank" title="새창" href="/yangsan/main.do">양산소방서</a></li>
+										<li><a target="_blank" title="새창" href="/uiryeong/main.do">의령소방서</a></li>
+										<li><a target="_blank" title="새창" href="/jinju/main.do">진주소방서</a></li>
+										<li><a target="_blank" title="새창" href="/changyeong/main.do">창녕소방서</a></li>                                    
+										<li><a target="_blank" title="새창" href="/tongyeong/main.do">통영소방서</a></li>
+										<li><a target="_blank" title="새창" href="/hadong/main.do">하동소방서</a></li>
+										<li><a target="_blank" title="새창" href="/haman/main.do">함안소방서</a></li>
+										<li><a target="_blank" title="새창" href="/hamyang/main.do">함양소방서</a></li>
+										<li><a target="_blank" title="새창" href="/hapcheon/main.do">합천소방서</a></li>
+									</ul>
+								</div>
+								<div class="site_list">
+									<h2 class="tit">도관련사이트</h2>
+									<ul>
+										<li><a target="_blank" title="새창" href="http://japan-korea-strait8.org">한일 정보네트워크</a></li>
+										<li><a target="_blank" title="새창" href="https://gam.gyeongnam.go.kr">도립미술관</a></li>
+										<li><a target="_blank" title="새창" href="https://www.bjfez.go.kr/">부산진해경제자유구역</a></li>
+										<li><a target="_blank" title="새창" href="http://www.mmc.or.kr">마산의료원</a></li>
+										<li><a target="_blank" title="새창" href="http://www.gndc.co.kr">경상남도개발공사</a></li>
+										<li><a target="_blank" title="새창" href="http://www.gnti.co.kr">경남무역</a></li>
+										<li><a target="_blank" title="새창" href="http://www.gnsinbo.or.kr">경남신용보증재단</a></li>
+										<li><a target="_blank" title="새창" href="http://www.gndi.re.kr">경남발전연구원</a></li>
+										<li><a target="_blank" title="새창" href="http://www.domerace.com">창원경륜공단</a></li>
+										<li><a target="_blank" title="새창" href="http://ceco.co.kr">창원컨벤션센터</a></li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<!-- //사이트링크 -->
+                    <div class="box_footer">
+                        <div class="footer_link clearfix">
+							<button type="button">Footer Link</button>
+							<ul>
+								<li class="point"><a href="/gnfire/cm/cntnts/cntntsView.do?mi=382&cntntsId=49">개인정보처리방침</a></li>
+								<li><a href="/gnfire/cm/cntnts/cntntsView.do?mi=383&cntntsId=50">소방서비스헌장</a></li>
+								<li><a href="/gnfire/na/ntt/selectNttList.do?mi=389&bbsId=10">홈페이지의견&오류신고</a></li>
+								<li><a href="/gnfire/cm/cntnts/cntntsView.do?mi=390&cntntsId=51">뷰어프로그램</a></li>
+								<li><a href="/gnfire/ml/selectMyList.do?mi=1471">내가쓴글보기</a></li>
+							</ul>
+						</div>
+
+						<p class="f_today">오늘 : ${totayStat}명 <span>전체 : ${allStat}명</span></p>
+
+
+						<div class="f_tal">
+							<!-- <h3><span>경상남도소방본부 <b>전화번호 안내</b></span></h3>		 -->
+							<ul>
+								<!-- <li><span>소방본부장(부속실)</span>Tel. 055)211-5303&nbsp;&nbsp;&nbsp;Fax. 055)211-5319</li> -->
+								<!-- <li><span>소방행정과</span>Tel. 055)211-5318&nbsp;&nbsp;&nbsp;Fax. 055)211-5319</li> -->
+								<!-- <li class="f_tal_2"><span>소방감사과</span>Tel. 055)211-5167&nbsp;&nbsp;&nbsp;Fax. 055)211-5169</li> -->
+								<!-- <li><span>소방예산장비과</span>Tel. 055)211-5678&nbsp;&nbsp;&nbsp;Fax. 055)211-5679</li> -->
+								<!-- <li class="f_tal_2"><span>방호구조과</span>Tel. 055)211-5357&nbsp;&nbsp;&nbsp;Fax. 055)211-5359</li> -->
+								<!-- <li><span>예방안전과</span>Tel. 055)211-5417&nbsp;&nbsp;&nbsp;Fax. 055)211-5419</li>								 -->
+								<li><span>119종합상황실</span>Tel. 055)211-5514&nbsp;&nbsp;&nbsp;Fax. 055)211-5399</li>
+								<li><span>119특수대응단</span>Tel. 055)211-5457&nbsp;&nbsp;&nbsp;Fax. 055)211-5459</li>				
+							</ul>
+							<ul>
+								<li><span>*안전체험관</span>Tel. 055)211-5484&nbsp;&nbsp;&nbsp;Fax. 055)211-5419</li>
+								<li><span>*소방교육훈련장</span>Tel. 055)211-5447&nbsp;&nbsp;&nbsp;Fax. 055)211-5419</li>			
+							</ul>
+						</div>
+						<div class="box_info">
+							<address>(51154) 경상남도 창원시 의창구 중앙대로 300(사림동) 경상남도 소방본부</address>
+							<p class="copyright">COPYRIGHT(C) GNFIRE.GO.KR ALL RIGHTS RESERVED.</p>
+						</div>
+
+                    </div>
+                </div>
+            </footer>
+</body>
+</html>
