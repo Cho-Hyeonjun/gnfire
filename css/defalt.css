@@ -81,14 +81,14 @@ i {font-style:normal;}
     font-family: 'Noto Sans KR';
     font-style: normal;
     font-weight: 100;
-    src: url('../css/font/NotoSansKR-Thin.ttf') format('ttf');
+    src: url('font/NotoSansKR-Thin.ttf') format('ttf');
 }
 
 @font-face {
     font-family: 'Noto Sans KR';
     font-style: normal;
     font-weight: 300;
-    src: url('../css/font/NotoSansKR-Light.ttf') format('ttf');
+    src: url('font/NotoSansKR-Light.ttf') format('ttf');
 }
 
 
@@ -96,28 +96,28 @@ i {font-style:normal;}
     font-family: 'Noto Sans KR';
     font-style: 400;
     font-weight: 400;
-    src: url('../css/font/NotoSansKR-Regular.ttf') format('ttf');
+    src: url('font/NotoSansKR-Regular.ttf') format('ttf');
 }
 
 @font-face {
     font-family: 'Noto Sans KR';
     font-style: 500;
     font-weight: 500;
-    src: url('../css/font/NotoSansKR-Medium.ttf') format('ttf');
+    src: url('font/NotoSansKR-Medium.ttf') format('ttf');
 }
 
 @font-face {
     font-family: 'Noto Sans KR';
     font-style: 700;
     font-weight: 700;
-    src: url('../css/font/NotoSansKR-Bold.ttf') format('ttf');
+    src: url('font/NotoSansKR-Bold.ttf') format('ttf');
 }
 
 @font-face {
     font-family: 'Noto Sans KR';
     font-style: 900;
     font-weight: 900;
-    src: url('../css/font/NotoSansKR-Black.ttf') format('ttf');
+    src: url('font/NotoSansKR-Black.ttf') format('ttf');
 }
 
 
@@ -125,55 +125,55 @@ i {font-style:normal;}
     font-family: 'Pretendard';
     font-style: normal;
     font-weight: 100;
-    src: url('../css/font/Pretendard-Thin.woff') format('opentype');
+    src: url('font/Pretendard-Thin.woff') format('opentype');
 }
 @font-face {
     font-family: 'Pretendard';
     font-style: normal;
     font-weight: 200;
-    src: url('../css/font/Pretendard-ExtraLight.woff') format('opentype');
+    src: url('font/Pretendard-ExtraLight.woff') format('opentype');
 }
 @font-face {
     font-family: 'Pretendard';
     font-style: normal;
     font-weight: 300;
-    src: url('../css/font/Pretendard-Light.woff') format('opentype');
+    src: url('font/Pretendard-Light.woff') format('opentype');
 }
 @font-face {
     font-family: 'Pretendard';
     font-style: normal;
     font-weight: 400;
-    src: url('../css/font/Pretendard-Regular.woff') format('opentype');
+    src: url('font/Pretendard-Regular.woff') format('opentype');
 }
 @font-face {
     font-family: 'Pretendard';
     font-style: normal;
     font-weight: 500;
-    src: url('../css/font/Pretendard-Medium.woff') format('opentype');
+    src: url('font/Pretendard-Medium.woff') format('opentype');
 }
 @font-face {
     font-family: 'Pretendard';
     font-style: normal;
     font-weight: 600;
-    src: url('../css/font/Pretendard-SemiBold.woff') format('opentype');
+    src: url('font/Pretendard-SemiBold.woff') format('opentype');
 }
 @font-face {
     font-family: 'Pretendard';
     font-style: normal;
     font-weight: 700;
-    src: url('../css/font/Pretendard-Bold.woff') format('opentype');
+    src: url('font/Pretendard-Bold.woff') format('opentype');
 }
 @font-face {
     font-family: 'Pretendard';
     font-style: normal;
     font-weight: 800;
-    src: url('../css/font/Pretendard-ExtraBold.woff') format('opentype');
+    src: url('font/Pretendard-ExtraBold.woff') format('opentype');
 }
 @font-face {
     font-family: 'Pretendard';
     font-style: normal;
     font-weight: 900;
-    src: url('../css/font/Pretendard-Black.woff') format('opentype');
+    src: url('font/Pretendard-Black.woff') format('opentype');
 }
 
 
@@ -181,21 +181,21 @@ i {font-style:normal;}
 
 @font-face {
     font-family: 'GmarketSans';
-    src: url('../css/font/GmarketSansttfBold.ttf') format('opentype');
+    src: url('font/GmarketSansttfBold.ttf') format('opentype');
     font-weight: 700;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'GmarketSans';
-    src: url('../css/font/GmarketSansttfMedium.ttf') format('opentype');
+    src: url('font/GmarketSansttfMedium.ttf') format('opentype');
     font-weight: 400;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'GmarketSans';
-    src: url('../css/font/GmarketSansttfLight.ttf') format('opentype');
+    src: url('font/GmarketSansttfLight.ttf') format('opentype');
     font-weight: 100;
     font-style: normal;
 }
@@ -204,21 +204,21 @@ i {font-style:normal;}
 
 @font-face {
     font-family: 'SBaggro';
-    src: url('../css/font/SB_aggro_L.ttf') format('opentype');
+    src: url('font/SB_aggro_L.ttf') format('opentype');
     font-weight: 100;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'SBaggro';
-    src: url('../css/font/SB_aggro_M.ttf') format('opentype');
+    src: url('font/SB_aggro_M.ttf') format('opentype');
     font-weight: 400;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'SBaggro';
-    src: url('../css/font/SB_aggro_B.ttf') format('opentype');
+    src: url('font/SB_aggro_B.ttf') format('opentype');
     font-weight: 600;
     font-style: normal;
 }
